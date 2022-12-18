@@ -6,25 +6,17 @@
 #    By: vmiseiki <vmiseiki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 16:40:53 by vmiseiki          #+#    #+#              #
-#    Updated: 2022/12/18 16:39:01 by vmiseiki         ###   ########.fr        #
+#    Updated: 2021/12/05 19:07:33 by vmiseiki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Color codes
-RESET	= \033[0m
-GREEN	= \033[32m
-YELLOW	= \033[33m
-BLUE	= \033[34m
-
-# Name of the program
 NAME = libft.a
 
-# Compilation flags
-CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
+HEADER = libft.h
 
-%.o : %.c 
-	@cc -O2 -w -DSTRINGPUTX11   -c -o $@ $<
+COMPILER = gcc
+
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_strlen.c\
 ft_strchr.c\
@@ -42,15 +34,12 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar -r $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	ar -r $(NAME) $(OBJ)
 	
 clean:
-	@rm -f *.o
+	/bin/rm -f *.o
 
 fclean: clean
-	@rm -f *.a
+	/bin/rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re bonus
