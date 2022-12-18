@@ -1,0 +1,13 @@
+Known issues:
+- needs to be adapted to new, faster MLX library
+- needs to be remade with frame calculated according the time, not the raw cpu power
+- forgot to check map extention.
+- Makefile needs rework;
+- sometimes player animation stops while moving diagonally;
+- Sometimes enemy at the edge of the map get stuck on map objeckts;
+- Maybe needs revork of collision detection. Ex.: maybe it should detect diferent 
+	sizes of collision depending on object facing direction (for ex. visually 
+	player sprite is less wider then facing right or left compared to up and down).
+- Needs code cleaning. Some functions are kinda dublicate. but because of shortge of time, i couldn't clean it.
+- Optional. Would be nice to have: meniu, level selection, music.
+- Needs more refined sprites :)
